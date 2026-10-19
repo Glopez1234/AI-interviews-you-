@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Garreth Lopez | Standards, Business Management & Governance</title>
+  <meta name="description" content="Garreth Lopez, Administrator at the National Standards Authority of Ireland, with over 20 years of experience in standards production, certification, business management and governance.">
+  <meta name="author" content="Garreth Lopez">
+  <meta name="theme-color" content="#020a18">
+
+  <meta property="og:title" content="Garreth Lopez | Professional Profile">
+  <meta property="og:description" content="Over 20 years of experience in standards, certification, business management and governance.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Garreth Lopez | Professional Profile">
+  <meta name="twitter:description" content="Standards, certification, business management and governance.">
+
+  <!-- Add og:image later: 1200x630 PNG matching dark theme -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('garreth-theme');
+        if (saved === 'light') {
+          document.documentElement.classList.add('light');
+        }
+      } catch (error) {
+        /* Use dark mode if local storage is unavailable. */
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: dark;
+
+      --bg: #020a18;
+      --bg-grad: linear-gradient(170deg, #020a18 0%, #041028 40%, #06142e 70%, #020a18 100%);
+      --surface: rgba(8,24,56,0.85);
+      --surface-solid: #081838;
+      --surface-hover: rgba(0,170,255,0.07);
+      --border: rgba(0,170,255,0.12);
+      --border-glow: rgba(0,170,255,0.3);
+      --text: #d0e0f0;
+      --text-bright: #e8f0ff;
+      --text-dim: #6888aa;
+      --neon: #00aaff;
+      --cyan: #00e5ff;
+      --green: #00ff88;
+      --amber: #ffaa00;
+      --red: #ff4466;
+      --purple: #aa66ff;
+      --header-bg: rgba(2,10,24,0.78);
+      --grid-color: rgba(0,170,255,0.035);
+      --shadow: rgba(0,0,0,0.25);
+      --orb-opacity: 0.08;
+      --focus: #00e5ff;
+    }
+
+    html.light {
+      color-scheme: light;
+
+      --bg: #edf3fb;
+      --bg-grad: linear-gradient(170deg, #edf3fb 0%, #f7faff 40%, #e5effb 70%, #f4f8fd 100%);
+      --surface: rgba(255,255,255,0.92);
+      --surface-solid: #ffffff;
+      --surface-hover: rgba(0,112,201,0.06);
+      --border: rgba(16,76,130,0.15);
+      --border-glow: rgba(0,112,201,0.32);
+      --text: #30465f;
+      --text-bright: #102b49;
+      --text-dim: #526b87;
+      --neon: #006fc4;
+      --cyan: #007b9c;
+      --green: #007d4c;
+      --amber: #956000;
+      --red: #bd284b;
+      --purple: #7042b7;
+      --header-bg: rgba(245,249,255,0.86);
+      --grid-color: rgba(16,76,130,0.045);
+      --shadow: rgba(20,45,75,0.08);
+      --orb-opacity: 0.07;
+      --focus: #006fc4;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: color 0.25s ease, background-color 0.25s ease;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      pointer-events: none;
+      background: var(--bg-grad);
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      pointer-events: none;
+      opacity: 1;
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+    }
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .orb {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: var(--orb-opacity);
+      will-change: transform;
+    }
+
+    .orb-one {
+      background: var(--neon);
+      top: 7%;
+      left: max(-200px, calc((100vw - 1250px) / 2 - 220px));
+      animation: orbit-one 24s ease-in-out infinite alternate;
+    }
+
+    .orb-two {
+      background: var(--purple);
+      top: 37%;
+      right: max(-220px, calc((100vw - 1250px) / 2 - 220px));
+      animation: orbit-two 29s ease-in-out infinite alternate;
+    }
+
+    .orb-three {
+      background: var(--cyan);
+      bottom: -100px;
+      left: max(-200px, calc((100vw - 1250px) / 2 - 180px));
+      animation: orbit-three 32s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbit-one {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(65px, 85px, 0) scale(1.12); }
+    }
+
+    @keyframes orbit-two {
+      from { transform: translate3d(0, 0, 0) scale(1.05); }
+      to { transform: translate3d(-75px, 65px, 0) scale(0.9); }
+    }
+
+    @keyframes orbit-three {
+      from { transform: translate3d(0, 0, 0) scale(0.9); }
+      to { transform: translate3d(90px, -70px, 0) scale(1.15); }
+    }
+
+    a {
+      color: var(--neon);
+      text-decoration: none;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 12px var(--border-glow);
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 4px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 920px;
+      min-height: 68px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-bright);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-glow);
+      border-radius: 10px;
+      color: var(--neon);
+      background: var(--surface-hover);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-button {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      color: var(--text);
+      background: var(--surface);
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .icon-button:hover {
+      border-color: var(--border-glow);
+      color: var(--neon);
+      background: var(--surface-hover);
+      transform: translateY(-1px);
+    }
+
+    .icon-button svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      position: relative;
+      padding-top: 98px;
+      padding-bottom: 78px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--neon);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--neon);
+      box-shadow: 0 0 10px var(--border-glow);
+    }
+
+    .hero h1 {
+      max-width: 820px;
+      margin: 0;
+      color: var(--text-bright);
+      font-size: clamp(42px, 8vw, 74px);
+      line-height: 1.06;
+      font-weight: 800;
+      letter-spacing: -0.065em;
+      overflow-wrap: anywhere;
+    }
+
+    .role-line {
+      margin: 22px 0 0;
+      color: var(--neon);
+      font-size: clamp(15px, 2.5vw, 19px);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-statement {
+      max-width: 760px;
+      margin: 26px 0 0;
+      color: var(--text);
+      font-size: clamp(20px, 3.5vw, 27px);
+      line-height: 1.55;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-support {
+      max-width: 650px;
+      margin: 20px 0 0;
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .primary-button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 19px;
+      border: 1px solid var(--neon);
+      border-radius: 11px;
+      color: #ffffff;
+      background: var(--neon);
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 8px 30px var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .primary-button:hover {
+      color: #ffffff;
+      background: var(--cyan);
+      border-color: var(--cyan);
+      box-shadow: 0 8px 32px var(--border-glow);
+      transform: translateY(-2px);
+      text-shadow: none;
+    }
+
+    .primary-button svg {
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+
+    .hero-note svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 65px;
+    }
+
+    .credential-card {
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+
+    .credential-value {
+      display: block;
+      color: var(--neon);
+      font-size: clamp(25px, 4vw, 34px);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .credential-label {
+      display: block;
+      margin-top: 8px;
+      color: var(--text-dim);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .section-heading {
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--text-bright);
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+    }
+
+    .section-heading p {
+      margin: 8px 0 0;
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+
+    .sections {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-bottom: 70px;
+    }
+
+    .content-section {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 8px 28px var(--shadow);
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .content-section:hover {
+      border-color: var(--border-glow);
+    }
+
+    .section-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 19px 21px;
+      border: 0;
+      color: var(--text-bright);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .section-number {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-glow);
+      border-radius: 50%;
+      color: var(--neon);
+      background: var(--surface-hover);
+      font-size: 12px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .section-title {
+      min-width: 0;
+      flex: 1;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .section-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-dim);
+      font-size: 18px;
+      line-height: 1;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .section-toggle:hover .section-icon {
+      color: var(--neon);
+      border-color: var(--border-glow);
+    }
+
+    .section-body {
+      display: grid;
+      grid-template-rows: 1fr;
+      opacity: 1;
+      transition: grid-template-rows 0.32s ease, opacity 0.25s ease;
+    }
+
+    .section-body-inner {
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .section-content {
+      padding: 0 24px 25px 72px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .content-section.is-collapsed .section-body {
+      grid-template-rows: 0fr;
+      opacity: 0;
+    }
+
+    .section-content p {
+      margin: 0 0 14px;
+    }
+
+    .section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-content strong {
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .section-content ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .section-content li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .section-content li::before {
+      content: "";
+      position: absolute;
+      top: 0.78em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--neon);
+      box-shadow: 0 0 8px var(--border-glow);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-dim);
+      background: var(--surface-hover);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 82px minmax(0, 1fr);
+      gap: 15px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-item:first-child {
+      padding-top: 0;
+    }
+
+    .education-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .education-level {
+      color: var(--neon);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .education-title {
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .education-description {
+      margin-top: 3px;
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+
+    .contact-panel {
+      padding: 26px;
+      border: 1px solid var(--border-glow);
+      border-radius: 15px;
+      background: var(--surface-hover);
+    }
+
+    .contact-panel h3 {
+      margin: 0 0 10px;
+      color: var(--text-bright);
+      font-size: 19px;
+      letter-spacing: -0.035em;
+    }
+
+    .contact-panel p {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .secondary-button {
+      min-height: 43px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 1px solid var(--border-glow);
+      border-radius: 10px;
+      color: var(--neon);
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .secondary-button:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
+      background: var(--surface-hover);
+      text-shadow: none;
+    }
+
+    .secondary-button svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-note {
+      margin-top: 15px !important;
+      font-size: 11px !important;
+    }
+
+    .site-footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: 920px;
+      min-height: 82px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-name {
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .footer-note {
+      color: var(--text-dim);
+      font-size: 11px;
+    }
+
+    .footer-note span {
+      color: var(--neon);
+    }
+
+    .back-to-top {
+      color: var(--text-dim);
+      font-size: 11px;
+    }
+
+    .back-to-top:hover {
+      color: var(--neon);
+    }
+
+    @media (min-width: 1200px) {
+      .hero {
+        padding-top: 115px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        min-height: 62px;
+        padding: 0 16px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding-top: 69px;
+        padding-bottom: 52px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 11vw, 58px);
+      }
+
+      .hero-statement {
+        font-size: 21px;
+      }
+
+      .credentials {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 49px;
+      }
+
+      .credential-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .credential-value {
+        min-width: 90px;
+        font-size: 28px;
+      }
+
+      .credential-label {
+        margin-top: 0;
+      }
+
+      .section-toggle {
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .section-number {
+        width: 32px;
+        height: 32px;
+      }
+
+      .section-title {
+        font-size: 14px;
+      }
+
+      .section-content {
+        padding: 0 17px 21px 60px;
+        font-size: 13px;
+      }
+
+      .education-item {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .contact-panel {
+        padding: 20px;
+      }
+
+      .footer-inner {
+        padding: 18px 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .ambient,
+      .grid-overlay,
+      .hero-actions,
+      .contact-actions,
+      .back-to-top {
+        display: none !important;
+      }
+
+      body,
+      body::before {
+        background: #ffffff !important;
+        color: #222222 !important;
+      }
+
+      .hero {
+        padding-top: 30px;
+      }
+
+      .content-section,
+      .credential-card,
+      .contact-panel {
+        background: #ffffff !important;
+        box-shadow: none !important;
+        border-color: #cccccc !important;
+        break-inside: avoid;
+      }
+
+      .section-body,
+      .content-section.is-collapsed .section-body {
+        grid-template-rows: 1fr !important;
+        opacity: 1 !important;
+      }
+
+      .section-body-inner {
+        overflow: visible !important;
+      }
+
+      .hero h1,
+      .section-heading h2,
+      .section-title,
+      .section-content strong,
+      .education-title,
+      .contact-panel h3 {
+        color: #111111 !important;
+      }
+
+      .hero-statement,
+      .section-content {
+        color: #333333 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Garreth Lopez home">
+        <span class="brand-mark" aria-hidden="true">GL</span>
+        <span>Garreth Lopez</span>
+      </a>
+
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="theme-toggle"
+          type="button"
+          title="Switch to light mode"
+          aria-label="Switch to light mode"
+          aria-pressed="false"
+        >
+          <svg id="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.42 1.42"></path>
+            <path d="m17.65 17.65 1.42 1.42"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m4.93 19.07 1.42-1.42"></path>
+            <path d="m17.65 6.35 1.42-1.42"></path>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button"
+          id="sections-toggle"
+          type="button"
+          title="Collapse all sections"
+          aria-label="Collapse all sections"
+          aria-expanded="true"
+        >
+          <svg id="sections-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 19h16"></path>
+            <path d="m8 3-4 2 4 2"></path>
+            <path d="m16 17 4 2-4 2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">Professional profile</p>
+
+        <h1 id="hero-title">Garreth Lopez</h1>
+
+        <p class="role-line">
+          Administrator · National Standards Authority of Ireland (NSAI)
+        </p>
+
+        <p class="hero-statement">
+          Over 20 years of experience in standards, certification, business
+          management and governance, with a commitment to professional standards
+          and organisational excellence.
+        </p>
+
+        <p class="hero-support">
+          Knowledge of Irish and international standards production and
+          certification systems for quality systems and building products.
+          Executive Member of the NSAI Board, with qualifications in project
+          management, business management, compliance and governance.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#career-contact">
+            Career opportunities
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+
+          <span class="hero-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            Experience backed by formal qualifications
+          </span>
+        </div>
+      </section>
+
+      <section class="credentials" aria-label="Professional highlights">
+        <div class="credential-card">
+          <span class="credential-value">20+</span>
+          <span class="credential-label">
+            Years of experience in standards and certification
+          </span>
+        </div>
+
+        <div class="credential-card">
+          <span class="credential-value">NFQ 8</span>
+          <span class="credential-label">
+            Business Management qualification
+          </span>
+        </div>
+
+        <div class="credential-card">
+          <span class="credential-value">NFQ 9</span>
+          <span class="credential-label">
+            Compliance and Governance qualification
+          </span>
+        </div>
+      </section>
+
+      <div class="section-heading">
+        <p class="eyebrow">Experience &amp; qualifications</p>
+        <h2>Professional background</h2>
+        <p>
+          An overview of my experience, responsibilities and learning journey.
+        </p>
+      </div>
+
+      <div class="sections" id="profile-sections">
+
+        <section class="content-section" id="professional-profile">
+          <button
+            class="section-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="section-body-1"
+          >
+            <span class="section-number">01</span>
+            <span class="section-title">Professional Profile</span>
+            <span class="section-icon" aria-hidden="true">−</span>
+          </button>
+
+          <div class="section-body" id="section-body-1">
+            <div class="section-body-inner">
+              <div class="section-content">
+                <p>
+                  I work for the <strong>National Standards Authority of Ireland
+                  (NSAI)</strong> as an administrator, bringing over 20 years
+                  of experience and knowledge of standards production and
+                  certification systems.
+                </p>
+
+                <p>
+                  My experience includes Irish and international standards,
+                  quality systems and building products. Alongside my
+                  professional role, I am an Executive Member of the NSAI Board.
+                </p>
+
+                <p>
+                  My qualifications in project management, business management,
+                  compliance and governance support my understanding of
+                  organisational processes, management and oversight.
+                </p>
+
+                <div class="tag-list" aria-label="Areas of experience">
+                  <span class="tag">Standards Production</span>
+                  <span class="tag">Certification Systems</span>
+                  <span class="tag">Quality Systems</span>
+                  <span class="tag">Building Products</span>
+                  <span class="tag">Business Management</span>
+                  <span class="tag">Governance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="standards-certification">
+          <button
+            class="section-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="section-body-2"
+          >
+            <span class="section-number">02</span>
+            <span class="section-title">Standards &amp; Certification Experience</span>
+            <span class="section-icon" aria-hidden="true">−</span>
+          </button>
+
+          <div class="section-body" id="section-body-2">
+            <div class="section-body-inner">
+              <div class="section-content">
+                <p>
+                  My experience at NSAI has given me knowledge of
+                  <strong>Irish and international standards production</strong>
+                  and certification systems.
+                </p>
+
+                <ul>
+                  <li>
+                    Understanding of standards production in Irish and
+                    international contexts.
+                  </li>
+                  <li>
+                    Knowledge of certification systems for quality management
+                    systems.
+                  </li>
+                  <li>
+                    Knowledge of certification systems for building products.
+                  </li>
+                  <li>
+                    More than 20 years of experience within the standards and
+                    certification environment.
+                  </li>
+                </ul>
+
+                <p style="margin-top: 17px;">
+                  These areas form the foundation of my professional experience
+                  and knowledge of the standards and certification environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="board-governance">
+          <button
+            class="section-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="section-body-3"
+          >
+            <span class="section-number">03</span>
+            <span class="section-title">Board &amp; Governance Experience</span>
+            <span class="section-icon" aria-hidden="true">−</span>
+          </button>
+
+          <div class="section-body" id="section-body-3">
+            <div class="section-body-inner">
+              <div class="section-content">
+                <p>
+                  I am an <strong>Executive Member of the NSAI Board</strong>.
+                  This role forms an important part of my professional
+                  background alongside my experience as an administrator.
+                </p>
+
+                <p>
+                  My Level 9 qualification in Compliance and Governance
+                  complements my professional experience and provides a formal
+                  foundation in these areas.
+                </p>
+
+                <ul>
+                  <li>Executive membership of the NSAI Board.</li>
+                  <li>Formal education in compliance and governance.</li>
+                  <li>Professional experience within a national standards body.</li>
+                </ul>
+
+                <p style="margin-top: 17px;">
+                  My combination of operational experience, board membership
+                  and formal education provides a broad perspective on standards,
+                  organisational management and governance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="education-qualifications">
+          <button
+            class="section-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="section-body-4"
+          >
+            <span class="section-number">04</span>
+            <span class="section-title">Education &amp; Qualifications</span>
+            <span class="section-icon" aria-hidden="true">−</span>
+          </button>
+
+          <div class="section-body" id="section-body-4">
+            <div class="section-body-inner">
+              <div class="section-content">
+                <p>
+                  My education reflects a continued focus on developing
+                  practical management knowledge and formal expertise in
+                  compliance and governance.
+                </p>
+
+                <div class="education-list">
+                  <div class="education-item">
+                    <div class="education-level">NFQ Level 6</div>
+                    <div>
+                      <div class="education-title">Project Management</div>
+                      <div class="education-description">
+                        Qualification in project management.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="education-item">
+                    <div class="education-level">NFQ Level 8</div>
+                    <div>
+                      <div class="education-title">Business Management</div>
+                      <div class="education-description">
+                        Degree-level qualification in business management.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="education-item">
+                    <div class="education-level">NFQ Level 9</div>
+                    <div>
+                      <div class="education-title">Compliance and Governance</div>
+                      <div class="education-description">
+                        Advanced qualification in compliance and governance.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p style="margin-top: 18px;">
+                  Together, these qualifications complement my experience in
+                  standards, certification and board-level responsibilities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" id="career-contact">
+          <button
+            class="section-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="section-body-5"
+          >
+            <span class="section-number">05</span>
+            <span class="section-title">Career Opportunities &amp; Contact</span>
+            <span class="section-icon" aria-hidden="true">−</span>
+          </button>
+
+          <div class="section-body" id="section-body-5">
+            <div class="section-body-inner">
+              <div class="section-content">
+                <div class="contact-panel">
+                  <h3>Interested in my professional background?</h3>
+
+                  <p>
+                    My experience spans standards production, certification
+                    systems, business management and governance. I welcome
+                    opportunities to discuss how my experience and
+                    qualifications could be relevant to future roles.
+                  </p>
+
+                  <div class="contact-actions">
+                    <a
+                      class="secondary-button"
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Visit LinkedIn to find Garreth Lopez"
+                    >
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                      Find me on LinkedIn
+                    </a>
+
+                    <button
+                      class="secondary-button"
+                      id="copy-profile"
+                      type="button"
+                    >
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="8" y="8" width="13" height="13" rx="2"></rect>
+                        <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path>
+                      </svg>
+                      Copy profile summary
+                    </button>
+                  </div>
+
+                  <p class="contact-note">
+                    Add your direct LinkedIn profile URL or professional email
+                    address when ready.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-name">Garreth Lopez</div>
+      <div class="footer-note">
+        © <span id="current-year"></span> · Built with the AI Badge
+      </div>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIcon = document.getElementById("theme-icon");
+      const sectionsToggle = document.getElementById("sections-toggle");
+      const sectionsIcon = document.getElementById("sections-icon");
+      const sections = Array.from(
+        document.querySelectorAll(".content-section")
+      );
+      const copyButton = document.getElementById("copy-profile");
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      const sunIcon = `
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.42 1.42"></path>
+        <path d="m17.65 17.65 1.42 1.42"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m4.93 19.07 1.42-1.42"></path>
+        <path d="m17.65 6.35 1.42-1.42"></path>
+      `;
+
+      const moonIcon = `
+        <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path>
+      `;
+
+      const collapseIcon = `
+        <path d="M4 5h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 19h16"></path>
+        <path d="m8 3-4 2 4 2"></path>
+        <path d="m16 17 4 2-4 2"></path>
+      `;
+
+      const expandIcon = `
+        <path d="M4 5h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 19h16"></path>
+        <path d="m8 8-4-3 4-3"></path>
+        <path d="m16 16 4 3-4 3"></path>
+      `;
+
+      function updateThemeButton() {
+        const light = root.classList.contains("light");
+
+        themeIcon.innerHTML = light ? moonIcon : sunIcon;
+        themeToggle.title = light ? "Switch to dark mode" : "Switch to light mode";
+        themeToggle.setAttribute(
+          "aria-label",
+          light ? "Switch to dark mode" : "Switch to light mode"
+        );
+        themeToggle.setAttribute("aria-pressed", String(light));
+      }
+
+      themeToggle.addEventListener("click", function () {
+        const light = root.classList.toggle("light");
+
+        try {
+          localStorage.setItem("garreth-theme", light ? "light" : "dark");
+        } catch (error) {
+          /* Theme still works for the current page session. */
+        }
+
+        updateThemeButton();
+      });
+
+      function setSectionOpen(section, open) {
+        const button = section.querySelector(".section-toggle");
+        const icon = section.querySelector(".section-icon");
+
+        section.classList.toggle("is-collapsed", !open);
+        button.setAttribute("aria-expanded", String(open));
+        icon.textContent = open ? "−" : "+";
+      }
+
+      function updateGlobalButton() {
+        const allOpen = sections.every(function (section) {
+          return !section.classList.contains("is-collapsed");
+        });
+
+        sectionsToggle.setAttribute("aria-expanded", String(allOpen));
+        sectionsToggle.setAttribute(
+          "aria-label",
+          allOpen ? "Collapse all sections" : "Expand all sections"
+        );
+        sectionsToggle.title = allOpen
+          ? "Collapse all sections"
+          : "Expand all sections";
+
+        sectionsIcon.innerHTML = allOpen ? collapseIcon : expandIcon;
+      }
+
+      sections.forEach(function (section) {
+        const button = section.querySelector(".section-toggle");
+
+        button.addEventListener("click", function () {
+          const isOpen = button.getAttribute("aria-expanded") === "true";
+          setSectionOpen(section, !isOpen);
+          updateGlobalButton();
+        });
+      });
+
+      sectionsToggle.addEventListener("click", function () {
+        const allOpen = sections.every(function (section) {
+          return !section.classList.contains("is-collapsed");
+        });
+
+        sections.forEach(function (section) {
+          setSectionOpen(section, !allOpen);
+        });
+
+        updateGlobalButton();
+      });
+
+      copyButton.addEventListener("click", async function () {
+        const summary =
+          "Garreth Lopez\n" +
+          "Administrator, National Standards Authority of Ireland (NSAI)\n\n" +
+          "Over 20 years of experience in standards production and " +
+          "certification systems for quality systems and building products.\n" +
+          "Executive Member of the NSAI Board.\n\n" +
+          "Qualifications:\n" +
+          "NFQ Level 6 - Project Management\n" +
+          "NFQ Level 8 - Business Management\n" +
+          "NFQ Level 9 - Compliance and Governance";
+
+        try {
+          await navigator.clipboard.writeText(summary);
+          copyButton.innerHTML = `
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m5 12 4 4L19 6"></path>
+            </svg>
+            Summary copied
+          `;
+        } catch (error) {
+          const textarea = document.createElement("textarea");
+          textarea.value = summary;
+          textarea.setAttribute("readonly", "");
+          textarea.style.position = "fixed";
+          textarea.style.opacity = "0";
+          document.body.appendChild(textarea);
+          textarea.select();
+
+          try {
+            const copied = document.execCommand("copy");
+            copyButton.textContent = copied
+              ? "Summary copied"
+              : "Copy unavailable";
+          } catch (copyError) {
+            copyButton.textContent = "Copy unavailable";
+          }
+
+          textarea.remove();
+        }
+
+        window.setTimeout(function () {
+          copyButton.innerHTML = `
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="8" width="13" height="13" rx="2"></rect>
+              <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path>
+            </svg>
+            Copy profile summary
+          `;
+        }, 2200);
+      });
+
+      updateThemeButton();
+      updateGlobalButton();
+    })();
+  </script>
+</body>
+</html>
